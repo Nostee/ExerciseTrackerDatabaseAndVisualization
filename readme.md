@@ -1,11 +1,11 @@
-<!-- INSTRUCTIONS FOR USING exercise_mongodb.js -->
+INSTRUCTIONS FOR USING exercise_mongodb.js
 
-<!--  SAMPLE IMPORT   -->
-<!-- Note: Automatic na siyang cumoconnect sa cloud database. Iadjust nalang ung url sa mismong code if ever man gagawa ng bagong database. -->
+ SAMPLE IMPORT  
+Note: Automatic na siyang cumoconnect sa cloud database. Iadjust nalang ung url sa mismong code if ever man gagawa ng bagong database.
 
 const db = require(__dirname + "/exercise_mongodb.js");
 
-<!--  SAMPLE DATA   -->
+ SAMPLE DATA  
 
 let data1 = {
     exercise: "Jumping Jack",
@@ -17,12 +17,12 @@ let data2 = {
     verdict: "Bad"
 }
 
-<!--  INPUTTING DATA  -->
+ INPUTTING DATA 
 
 db("Exercise",data1);
 db("Posture",data2);
 
-<!--  FETCHING DATA  -->
+ FETCHING DATA 
 
 async function start(){
     let data = await db("Fetch","Exercise");
