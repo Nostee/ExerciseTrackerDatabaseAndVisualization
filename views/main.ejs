@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="height: 500px">
+      <canvas id="myChart"></canvas>
+    </div>
+  </body>   
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const data = {
+      labels: <%- JSON.stringify(date)%>,
+      datasets: [
+        {
+          label: "<%= exercise %>",
+          backgroundColor: "rgb(255, 99, 132)",
+          borderColor: "rgb(255, 99, 132)",
+          data: [<%= counter %>],
+        },
+      ],
+    };
+
+    const config = {
+      type: "line",
+      data: data,
+      options: {},
+    };
+
+    const myChart = new Chart(document.getElementById("myChart"), config);
+  </script>
+</html>
