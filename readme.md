@@ -21,6 +21,7 @@ let data2 = {
 # INPUTTING DATA 
 
 db("Exercise",data1);
+
 db("Posture",data2);
 
 # FETCHING DATA 
@@ -29,4 +30,5 @@ async function start(){
     let data = await db("Fetch","Exercise");
     console.log(data);
 }
+
 start();
